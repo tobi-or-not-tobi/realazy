@@ -9,7 +9,7 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 // AoT requires an exported function for factories
 export function createTranslateLoader(http: HttpClient) {
-  return new TranslateHttpLoader(http, './assets/i18n/locale-', '.json');
+  return new TranslateHttpLoader(http, 'http://localhost:3000/locales/', '');
 }
 
 @NgModule({

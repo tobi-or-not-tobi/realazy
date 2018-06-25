@@ -1,0 +1,15 @@
+{
+  "locales": [
+    {
+      "id": "de",
+      "HELLO": "Achtung {{value}} {{more}}!!!"
+    },
+    {
+      "id": "en",
+      "HELLO": "hello {{value}} {{more}}!!!"
+    },
+    {
+      "id": "nl"
+    }
+  ]
+}

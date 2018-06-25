@@ -1,4 +1,8 @@
-<a (click)="toggleLanguage()">toggle language</a>
+<select (change)="toggleLanguage($event)">
+  <option value="en">en</option>
+  <option value="de">de</option>
+  <option value="nl">nl</option>
+</select>
 <div>{{ 'HELLO' | translate: param }}</div>
 <a routerLink="/route-1">route-1</a>
 

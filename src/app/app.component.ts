@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 
 import { TranslateService } from '@ngx-translate/core';
+import { FromEventTarget } from 'rxjs/internal/observable/fromEvent';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -18,8 +19,8 @@ export class AppComponent {
     translate.use('en');
   }
 
-  toggleLanguage() {
-    console.log(this.translate.getLangs());
-    this.translate.use('de');
+  toggleLanguage(event) {
+    console.log(event.target.value);
+    this.translate.use(event.target.value);
   }
 }
