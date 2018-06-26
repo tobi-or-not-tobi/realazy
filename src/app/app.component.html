@@ -3,6 +3,9 @@
   <option value="de">de</option>
   <option value="nl">nl</option>
 </select>
+<p>
+  <span *ngIf="isLocaleLoading|async">LOCALES LOADING</span>
+</p>
 <div>{{ 'HELLO' | translate: param }}</div>
 <a routerLink="/route-1">route-1</a>
 
