@@ -1,8 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Router, Routes } from '@angular/router';
 import { TranslateService, LangChangeEvent } from '@ngx-translate/core';
-import { map } from 'rxjs/operators';
-import { routerNgProbeToken } from '@angular/router/src/router_module';
 
 @Injectable({
   providedIn: 'root'

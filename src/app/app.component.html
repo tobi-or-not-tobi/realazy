@@ -9,8 +9,6 @@
 <div>{{ 'HELLO' | translate: param }}</div>
 <a routerLink="/">home</a>
 <br/>
-<a routerLink="/PRODUCTS">PRODUCTS</a>
-<br/>
 <a [routerLink]="['/', 'ROUTES.PRODUCTS' | translate]">{{ 'ROUTES.PRODUCTS' | translate}}</a>
 
 <router-outlet></router-outlet>

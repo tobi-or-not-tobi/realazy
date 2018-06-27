@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { ContainerComponent } from './container.component';
 import { Routes, RouterModule } from '@angular/router';
+import { TranslateModule } from '@ngx-translate/core';
 
 const routes: Routes = [
   {
@@ -12,7 +13,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [CommonModule, RouterModule.forChild(routes)],
+  imports: [CommonModule, RouterModule.forChild(routes), TranslateModule],
   declarations: [ContainerComponent]
 })
 export class Mod1Module {}

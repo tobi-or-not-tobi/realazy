@@ -3,6 +3,7 @@
     {
       "id": "en",
       "HELLO": "hello {{value}} {{more}}!!!",
+      "LAZY": "This is lazy loaded",
       "ROUTES": {
         "HOME": "",
         "PRODUCTS": "product"
@@ -11,6 +12,7 @@
     {
       "id": "de",
       "HELLO": "Achtung {{value}} {{more}}!!!",
+      "LAZY": "Warten sie bitte",
       "ROUTES": {
         "HOME": "",
         "PRODUCTS": "produkt"

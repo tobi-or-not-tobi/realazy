@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { MainComponent } from './main/main.component';
-import { RouteConfigGuard } from './route-config-guard';
 
 const routes: Routes = [
   {
