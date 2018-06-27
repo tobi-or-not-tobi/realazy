@@ -1,12 +1,20 @@
 {
   "locales": [
     {
-      "id": "de",
-      "HELLO": "Achtung {{value}} {{more}}!!!"
+      "id": "en",
+      "HELLO": "hello {{value}} {{more}}!!!",
+      "ROUTES": {
+        "HOME": "",
+        "PRODUCTS": "product"
+      }
     },
     {
-      "id": "en",
-      "HELLO": "hello {{value}} {{more}}!!!"
+      "id": "de",
+      "HELLO": "Achtung {{value}} {{more}}!!!",
+      "ROUTES": {
+        "HOME": "",
+        "PRODUCTS": "produkt"
+      }
     },
     {
       "id": "nl"

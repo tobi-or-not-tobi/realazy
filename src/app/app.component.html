@@ -7,6 +7,10 @@
   <span *ngIf="isLocaleLoading|async">LOCALES LOADING</span>
 </p>
 <div>{{ 'HELLO' | translate: param }}</div>
-<a routerLink="/route-1">route-1</a>
+<a routerLink="/">home</a>
+<br/>
+<a routerLink="/PRODUCTS">PRODUCTS</a>
+<br/>
+<a [routerLink]="['/', 'ROUTES.PRODUCTS' | translate]">{{ 'ROUTES.PRODUCTS' | translate}}</a>
 
 <router-outlet></router-outlet>

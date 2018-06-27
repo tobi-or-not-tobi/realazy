@@ -4,7 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "mockserver": "json-server --watch ./db.json -d 5000",
+    "mockserver": "json-server --watch ./db.json -d 2000",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",

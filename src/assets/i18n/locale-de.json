@@ -1,3 +1,8 @@
 {
-  "HELLO": "Achtung {{value}} {{more}}!!!"
+  "HELLO": "Achtung {{value}} {{more}}!!!",
+
+  "ROUTES": {
+    "HOME": "",
+    "PRODUCTS": "produkt"
+  }
 }

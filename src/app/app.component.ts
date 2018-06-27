@@ -1,7 +1,10 @@
 import { Component, AfterViewInit } from '@angular/core';
 
-import { TranslateService, LangChangeEvent, DefaultLangChangeEvent, TranslationChangeEvent } from '@ngx-translate/core';
+import { TranslateService, LangChangeEvent } from '@ngx-translate/core';
 import { BehaviorSubject } from 'rxjs';
+import { DynamicRoutesService } from './shared/dynamic-routes.service';
+import { RouteConfigGuard } from './route-config-guard';
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -10,10 +13,18 @@ import { BehaviorSubject } from 'rxjs';
 export class AppComponent implements AfterViewInit {
   param = { value: 'world', more: 'more' };
   title = 'app';
-
+  
   isLocaleLoading: BehaviorSubject<boolean> = new BehaviorSubject<boolean>(true);
 
-  constructor(private translate: TranslateService) {}
+  constructor(private translate: TranslateService, private dynamicRoutesService: DynamicRoutesService) {
+    this.dynamicRoutesService.createRoute([
+      {
+        path: 'PRODUCTS',
+        loadChildren: './mod1/mod1.module#Mod1Module',
+        canActivate: [RouteConfigGuard]
+      }
+    ]);
+  }
 
   ngAfterViewInit() {
     this.initLanguageSwitcher();
@@ -32,7 +43,7 @@ export class AppComponent implements AfterViewInit {
     });
   }
 
-  private toggleLanguage(event) {
+  toggleLanguage(event) {
     this.isLocaleLoading.next(true);
     this.translate.use(event.target.value);
   }
