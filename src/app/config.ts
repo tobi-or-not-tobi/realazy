@@ -1,11 +1,6 @@
 import { DynamicComponentManifest } from './dynamic-component-loader/dynamic-component.manifest';
 
 export const comonentManifests: DynamicComponentManifest[] = [
-  // {
-  //   componentId: 'message',
-  //   path: 'dynamic-message',
-  //   loadChildren: './dynamic-modules/message/message.module#MessageModule'
-  // },
   {
     componentId: 'banner',
     path: 'dynamic-banner',
@@ -15,10 +10,15 @@ export const comonentManifests: DynamicComponentManifest[] = [
     componentId: 'paragraph',
     path: 'dynamic-paragraph',
     loadChildren: './dynamic-components/paragraph/paragraph.module#ParagraphModule'
+  },
+  {
+    componentId: 'comp1',
+    path: 'dynamic-comp1',
+    loadChildren: './dynamic-components/group/group.module#GroupModule'
+  },
+  {
+    componentId: 'comp2',
+    path: 'dynamic-comp2',
+    loadChildren: './dynamic-components/group/group.module#GroupModule'
   }
-  // {
-  //   componentId: 'banner2',
-  //   path: 'dynamic-banner2',
-  //   loadChildren: './dynamic-modules/banner/group.module#GroupModule'
-  // }
 ];

@@ -27,6 +27,11 @@ export class DynamicComponentLoader {
       // Read from the moduleRef injector and locate the dynamic component type
       let dynamicComponentType = moduleRef.injector.get(DYNAMIC_COMPONENT);
 
+      // support singulars and plurals
+      if (dynamicComponentType[componentId]) {
+        dynamicComponentType = dynamicComponentType[componentId];
+      }
+      
       // Resolve this component factory
       return moduleRef.componentFactoryResolver.resolveComponentFactory<T>(dynamicComponentType);
     });
