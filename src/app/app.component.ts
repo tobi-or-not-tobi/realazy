@@ -1,8 +1,9 @@
-import { Component, AfterViewInit } from '@angular/core';
+import { Component, AfterViewInit, ViewChild, ViewContainerRef } from '@angular/core';
 
 import { TranslateService, LangChangeEvent } from '@ngx-translate/core';
 import { BehaviorSubject } from 'rxjs';
 import { DynamicRoutesService } from './shared/dynamic-routes.service';
+import { DynamicComponentLoader } from './dynamic-component-loader/dynamic-component-loader.service';
 
 @Component({
   selector: 'app-root',
@@ -13,9 +14,16 @@ export class AppComponent implements AfterViewInit {
   param = { value: 'world', more: 'more' };
   title = 'app';
 
+  @ViewChild('testOutlet', { read: ViewContainerRef })
+  testOutlet: ViewContainerRef;
+
   isLocaleLoading: BehaviorSubject<boolean> = new BehaviorSubject<boolean>(true);
 
-  constructor(private translate: TranslateService, private dynamicRoutesService: DynamicRoutesService) {
+  constructor(
+    private translate: TranslateService,
+    private dynamicRoutesService: DynamicRoutesService,
+    private dynamicComponentLoader: DynamicComponentLoader
+  ) {
     this.dynamicRoutesService.createRoute([
       {
         path: 'PRODUCTS',
@@ -44,5 +52,17 @@ export class AppComponent implements AfterViewInit {
   toggleLanguage(event) {
     this.isLocaleLoading.next(true);
     this.translate.use(event.target.value);
+  }
+
+  loadComponent(componentId: string) {
+    this.dynamicComponentLoader.getComponentFactory<any>(componentId).subscribe(
+      componentFactory => {
+        // console.log(componentFactory);
+        this.testOutlet.createComponent(componentFactory);
+      },
+      error => {
+        console.warn(error);
+      }
+    );
   }
 }

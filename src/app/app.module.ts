@@ -7,6 +7,8 @@ import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { MainComponent } from './main/main.component';
+import { DynamicComponentLoaderModule } from './dynamic-component-loader/dynamic-component-loader.module';
+import { comonentManifests } from './config';
 
 // AoT requires an exported function for factories
 export function createTranslateLoader(http: HttpClient) {
@@ -17,6 +19,7 @@ export function createTranslateLoader(http: HttpClient) {
   declarations: [AppComponent, MainComponent],
   imports: [
     BrowserModule,
+    DynamicComponentLoaderModule.forRoot(comonentManifests),
     AppRoutingModule,
     HttpClientModule,
     TranslateModule.forRoot({

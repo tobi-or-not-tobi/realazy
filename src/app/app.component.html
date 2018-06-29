@@ -12,3 +12,12 @@
 <a [routerLink]="['/', 'ROUTES.PRODUCTS' | translate]">{{ 'ROUTES.PRODUCTS' | translate}}</a>
 
 <router-outlet></router-outlet>
+
+<hr/>
+<h3>dynamic component loading</h3>
+<button type="button" (click)="loadComponent('banner')">Load banner</button>
+<button type="button" (click)="loadComponent('paragraph')">Load paragraph</button>
+
+
+
+<div #testOutlet></div>
