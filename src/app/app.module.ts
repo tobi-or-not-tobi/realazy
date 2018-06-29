@@ -7,7 +7,6 @@ import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { MainComponent } from './main/main.component';
-import { RouteConfigGuard } from './route-config-guard';
 
 // AoT requires an exported function for factories
 export function createTranslateLoader(http: HttpClient) {
@@ -28,7 +27,7 @@ export function createTranslateLoader(http: HttpClient) {
       }
     })
   ],
-  providers: [RouteConfigGuard],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule {}

@@ -3,7 +3,6 @@ import { Component, AfterViewInit } from '@angular/core';
 import { TranslateService, LangChangeEvent } from '@ngx-translate/core';
 import { BehaviorSubject } from 'rxjs';
 import { DynamicRoutesService } from './shared/dynamic-routes.service';
-import { RouteConfigGuard } from './route-config-guard';
 
 @Component({
   selector: 'app-root',
@@ -13,15 +12,14 @@ import { RouteConfigGuard } from './route-config-guard';
 export class AppComponent implements AfterViewInit {
   param = { value: 'world', more: 'more' };
   title = 'app';
-  
+
   isLocaleLoading: BehaviorSubject<boolean> = new BehaviorSubject<boolean>(true);
 
   constructor(private translate: TranslateService, private dynamicRoutesService: DynamicRoutesService) {
     this.dynamicRoutesService.createRoute([
       {
         path: 'PRODUCTS',
-        loadChildren: './mod1/mod1.module#Mod1Module',
-        canActivate: [RouteConfigGuard]
+        loadChildren: './mod1/mod1.module#Mod1Module'
       }
     ]);
   }
