@@ -65,4 +65,8 @@ export class AppComponent implements AfterViewInit {
       }
     );
   }
+
+  loadComponents(components: string[]) {
+    components.forEach(componentId => this.loadComponent(componentId));
+  }
 }
