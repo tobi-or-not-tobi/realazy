@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { BannerModule as libraryBannerModule } from 'components';
-import { ParagraphModule as libraryParagraphModule } from 'components';
 
 import { GroupModule as libraryGroupModule } from 'components';
 
@@ -9,12 +8,6 @@ import { GroupModule as libraryGroupModule } from 'components';
   exports: [libraryBannerModule]
 })
 export class BannerModule {}
-
-@NgModule({
-  imports: [libraryParagraphModule],
-  exports: [libraryParagraphModule]
-})
-export class ParagraphModule {}
 
 @NgModule({
   imports: [libraryGroupModule],

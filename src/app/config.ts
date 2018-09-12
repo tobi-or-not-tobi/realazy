@@ -9,13 +9,12 @@ export const componentManifests: DynamicComponentManifest[] = [
   {
     componentId: 'paragraph',
     path: 'dynamic-paragraph',
-    loadChildren: './dynamic-components/wrapper.module#ParagraphModule'
+    loadChildren: './dynamic-components/paragraph.module#ParagraphModule'
   },
   {
     componentId: 'comp1',
     path: 'dynamic-comp1',
     loadChildren: './dynamic-components/wrapper.module#GroupModule'
-    // loadChildren: './dynamic-components/group/group.module#GroupModule'
   },
   {
     componentId: 'comp2',
