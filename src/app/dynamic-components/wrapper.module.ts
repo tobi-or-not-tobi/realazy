@@ -1,7 +1,8 @@
 import { NgModule } from '@angular/core';
 import { BannerModule as libraryBannerModule } from 'components';
-
 import { ParagraphModule as libraryParagraphModule } from 'components';
+
+import { GroupModule as libraryGroupModule } from 'components';
 
 @NgModule({
   imports: [libraryBannerModule],
@@ -14,3 +15,9 @@ export class BannerModule {}
   exports: [libraryParagraphModule]
 })
 export class ParagraphModule {}
+
+@NgModule({
+  imports: [libraryGroupModule],
+  exports: [libraryGroupModule]
+})
+export class GroupModule {}
