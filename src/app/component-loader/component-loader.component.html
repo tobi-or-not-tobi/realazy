@@ -1,0 +1,14 @@
+<hr />
+<h3>dynamic component loading</h3>
+<p>The below illustrates that we can load components from a lazy loaded chunk.</p>
+<button type="button" (click)="loadComponent('banner')">Load banner</button>
+<button type="button" (click)="loadComponent('paragraph')">Load paragraph</button>
+
+<h3>dynamic component loading (group)</h3>
+<p>The below components illustrate that we can load <i>multiple components</i> from one lazy loaded chunk.</p>
+<button type="button" (click)="loadComponent('comp1')">comp1</button>
+<button type="button" (click)="loadComponent('comp2')">comp2</button>
+
+<button type="button" (click)="loadComponents(['comp1', 'comp2'])">comp1 & comp2</button>
+
+<div #wrapper></div>

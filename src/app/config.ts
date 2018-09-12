@@ -1,6 +1,6 @@
-import { DynamicComponentManifest } from './dynamic-component-loader/dynamic-component.manifest';
+import { DynamicComponentManifest } from './component-loader/dynamic-component.manifest';
 
-export const comonentManifests: DynamicComponentManifest[] = [
+export const componentManifests: DynamicComponentManifest[] = [
   {
     componentId: 'banner',
     path: 'dynamic-banner',

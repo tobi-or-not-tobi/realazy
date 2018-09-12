@@ -1,0 +1,14 @@
+<select (change)="toggleLanguage($event)">
+  <option value="en">en</option>
+  <option value="de">de</option>
+  <option value="nl">nl</option>
+</select>
+<p>
+  <span *ngIf="isLocaleLoading|async">LOCALES LOADING</span>
+</p>
+<div>{{ 'HELLO' | translate: param }}</div>
+<a routerLink="/">home</a>
+<br />
+<a [routerLink]="['/', 'ROUTES.PRODUCTS' | translate]">{{ 'ROUTES.PRODUCTS' | translate}}</a>
+
+<router-outlet></router-outlet>

@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ParagraphComponent } from './paragraph.component';
-import { DYNAMIC_COMPONENT } from '../../dynamic-component-loader/dynamic-component.manifest';
+import { DYNAMIC_COMPONENT } from '../../component-loader/dynamic-component.manifest';
 
 @NgModule({
   imports: [CommonModule],
