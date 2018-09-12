@@ -4,14 +4,12 @@ export const componentManifests: DynamicComponentManifest[] = [
   {
     componentId: 'banner',
     path: 'dynamic-banner',
-    // loadChildren: './dynamic-components/banner/banner.module#BannerModule'
     loadChildren: './dynamic-components/wrapper.module#BannerModule'
-    // loadChildren: 'components#BannerComponent'
   },
   {
     componentId: 'paragraph',
     path: 'dynamic-paragraph',
-    loadChildren: './dynamic-components/paragraph/paragraph.module#ParagraphModule'
+    loadChildren: './dynamic-components/wrapper.module#ParagraphModule'
   },
   {
     componentId: 'comp1',
