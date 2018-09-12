@@ -1,7 +1,7 @@
 import { NgModuleFactoryLoader, Injectable, Inject, Injector, ComponentFactory } from '@angular/core';
-import { DYNAMIC_COMPONENT_MANIFESTS, DynamicComponentManifest, DYNAMIC_COMPONENT } from './dynamic-component.manifest';
 
 import { Observable, from } from 'rxjs';
+import { DYNAMIC_COMPONENT_MANIFESTS, DynamicComponentManifest, DYNAMIC_COMPONENT } from 'components';
 
 @Injectable({
   providedIn: 'root'
@@ -31,7 +31,7 @@ export class DynamicComponentLoader {
       if (dynamicComponentType[componentId]) {
         dynamicComponentType = dynamicComponentType[componentId];
       }
-      
+
       // Resolve this component factory
       return moduleRef.componentFactoryResolver.resolveComponentFactory<T>(dynamicComponentType);
     });

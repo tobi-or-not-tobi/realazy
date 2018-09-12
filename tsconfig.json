@@ -10,6 +10,11 @@
     "experimentalDecorators": true,
     "target": "es5",
     "typeRoots": ["node_modules/@types"],
-    "lib": ["es2017", "dom"]
+    "lib": ["es2017", "dom"],
+
+    "paths": {
+      "components": ["projects/components/src/public_api"],
+      "components/*": ["projects/components/src/public_api/*"]
+    }
   }
 }

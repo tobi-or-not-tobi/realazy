@@ -1,8 +1,8 @@
 import { NgModule, ModuleWithProviders } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ComponentLoaderComponent } from './component-loader.component';
-import { DynamicComponentManifest, DYNAMIC_COMPONENT_MANIFESTS } from './dynamic-component.manifest';
 import { ROUTES } from '@angular/router';
+import { DynamicComponentManifest, DYNAMIC_COMPONENT_MANIFESTS } from 'components';
 
 @NgModule({
   imports: [CommonModule],
