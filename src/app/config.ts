@@ -1,10 +1,12 @@
-import { DynamicComponentManifest } from './component-loader/dynamic-component.manifest';
+import { DynamicComponentManifest } from 'components';
 
 export const componentManifests: DynamicComponentManifest[] = [
   {
     componentId: 'banner',
     path: 'dynamic-banner',
-    loadChildren: './dynamic-components/banner/banner.module#BannerModule'
+    // loadChildren: './dynamic-components/banner/banner.module#BannerModule'
+    loadChildren: './dynamic-components/wrapper.module#BannerModule'
+    // loadChildren: 'components#BannerComponent'
   },
   {
     componentId: 'paragraph',
